@@ -19,7 +19,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     } else {
       segments.unshift(nextLocale);
     }
-    router.push("/" + segments.join("/"));
+    router.push(("/" + segments.join("/")) as any);
   };
 
   return (
