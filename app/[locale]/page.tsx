@@ -39,7 +39,7 @@ export default async function HomePage({ params }: { params: { locale: string } 
             <CardHeader className="text-sm font-semibold">{item.title}</CardHeader>
             <CardContent className="text-sm text-subtle">
               <p>{locale === "fa" ? "تجربه ممتاز" : item.copy}</p>
-              <Link className="mt-3 inline-block text-brand-700" href={item.href}>
+              <Link className="mt-3 inline-block text-brand-700" href={item.href as any}>
                 {locale === "fa" ? "مشاهده" : "View"}
               </Link>
             </CardContent>
