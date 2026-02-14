@@ -160,22 +160,22 @@ export default function SearchPage() {
             <div className="grid gap-3 md:grid-cols-2">
               <Input
                 placeholder={locale === "fa" ? "حیاط؟ true/false" : "Fenced yard true/false"}
-                value={filters.has_fenced_yard ?? ""}
+                value={filters.has_fenced_yard !== undefined ? String(filters.has_fenced_yard) : ""}
                 onChange={(event) => updateParam("has_fenced_yard", event.target.value || undefined)}
               />
               <Input
                 placeholder={locale === "fa" ? "سیگار؟ true/false" : "Smoking true/false"}
-                value={filters.smoking_household ?? ""}
+                value={filters.smoking_household !== undefined ? String(filters.smoking_household) : ""}
                 onChange={(event) => updateParam("smoking_household", event.target.value || undefined)}
               />
               <Input
                 placeholder={locale === "fa" ? "کودک؟ true/false" : "Children true/false"}
-                value={filters.has_children ?? ""}
+                value={filters.has_children !== undefined ? String(filters.has_children) : ""}
                 onChange={(event) => updateParam("has_children", event.target.value || undefined)}
               />
               <Input
                 placeholder={locale === "fa" ? "حیوان؟ true/false" : "Pets true/false"}
-                value={filters.has_pets ?? ""}
+                value={filters.has_pets !== undefined ? String(filters.has_pets) : ""}
                 onChange={(event) => updateParam("has_pets", event.target.value || undefined)}
               />
             </div>
