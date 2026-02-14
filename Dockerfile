@@ -13,13 +13,13 @@ RUN \
 FROM base AS builder
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN mkdir -p /app/public
 RUN npm run build
 
 FROM base AS runner
 ENV NODE_ENV=production
 RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
 COPY --from=builder /app/.next ./.next
-RUN mkdir -p ./public
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/node_modules ./node_modules
