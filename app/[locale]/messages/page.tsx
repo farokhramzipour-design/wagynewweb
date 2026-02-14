@@ -20,6 +20,12 @@ export default function MessagesPage() {
   const [mediaUrl, setMediaUrl] = useState("");
   const [mediaId, setMediaId] = useState<number | null>(null);
 
+  const conversations = useQuery({
+    queryKey: ["conversations", userId],
+    queryFn: () => messaging.listConversations(userId as number),
+    enabled: Boolean(userId)
+  });
+
   const messages = useQuery({
     queryKey: ["messages", conversationId],
     queryFn: () => messaging.listMessages(conversationId as number, 50),
@@ -163,8 +169,3 @@ export default function MessagesPage() {
     </div>
   );
 }
-  const conversations = useQuery({
-    queryKey: ["conversations", userId],
-    queryFn: () => messaging.listConversations(userId as number),
-    enabled: Boolean(userId)
-  });
