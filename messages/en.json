@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "search": "Search",
+    "bookings": "Bookings",
+    "messages": "Messages",
+    "favorites": "Favorites",
+    "wallet": "Wallet",
+    "charity": "Charity",
+    "provider": "Provider",
+    "admin": "Admin"
+  },
+  "actions": {
+    "continue": "Continue",
+    "back": "Back",
+    "submit": "Submit",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "upload": "Upload",
+    "filter": "Filter",
+    "clear": "Clear",
+    "add": "Add",
+    "remove": "Remove",
+    "approve": "Approve",
+    "reject": "Reject",
+    "request": "Request",
+    "pay": "Pay",
+    "favorite": "Favorite",
+    "unfavorite": "Unfavorite"
+  },
+  "auth": {
+    "title": "Login with OTP",
+    "phone": "Phone number",
+    "otp": "Verification code",
+    "send": "Send code",
+    "verify": "Verify and login"
+  },
+  "search": {
+    "title": "Find Pet Care",
+    "city": "City",
+    "province": "Province",
+    "service": "Service",
+    "dateRange": "Date range",
+    "petCount": "Pets",
+    "filters": "Advanced filters",
+    "availability": "Available",
+    "results": "Results"
+  },
+  "provider": {
+    "dashboard": "Provider dashboard",
+    "services": "My services",
+    "onboarding": "Service onboarding",
+    "submitReview": "Submit for review"
+  },
+  "admin": {
+    "queues": "Review queue",
+    "providers": "Providers",
+    "services": "Provider services",
+    "reviews": "Reports"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "search": "جستجو",
+    "bookings": "رزروها",
+    "messages": "پیام‌ها",
+    "favorites": "علاقه‌مندی‌ها",
+    "wallet": "کیف‌پول",
+    "charity": "حمایت از حیوانات",
+    "provider": "پنل ارائه‌دهنده",
+    "admin": "مدیریت"
+  },
+  "actions": {
+    "continue": "ادامه",
+    "back": "بازگشت",
+    "submit": "ارسال",
+    "save": "ذخیره",
+    "cancel": "لغو",
+    "confirm": "تایید",
+    "upload": "آپلود",
+    "filter": "فیلتر",
+    "clear": "پاک کردن",
+    "add": "افزودن",
+    "remove": "حذف",
+    "approve": "تایید",
+    "reject": "رد",
+    "request": "درخواست",
+    "pay": "پرداخت",
+    "favorite": "علاقه‌مند",
+    "unfavorite": "حذف علاقه‌مندی"
+  },
+  "auth": {
+    "title": "ورود با کد یکبار مصرف",
+    "phone": "شماره موبایل",
+    "otp": "کد تایید",
+    "send": "ارسال کد",
+    "verify": "تایید و ورود"
+  },
+  "search": {
+    "title": "جستجوی مراقبت حیوانات",
+    "city": "شهر",
+    "province": "استان",
+    "service": "نوع خدمت",
+    "dateRange": "بازه تاریخ",
+    "petCount": "تعداد حیوان",
+    "filters": "فیلترهای پیشرفته",
+    "availability": "در دسترس",
+    "results": "نتایج"
+  },
+  "provider": {
+    "dashboard": "داشبورد ارائه‌دهنده",
+    "services": "خدمات من",
+    "onboarding": "راه‌اندازی خدمت",
+    "submitReview": "ارسال برای بررسی"
+  },
+  "admin": {
+    "queues": "صف بررسی",
+    "providers": "ارائه‌دهندگان",
+    "services": "خدمات ارائه‌دهنده",
+    "reviews": "گزارش‌ها"
+  }
+}

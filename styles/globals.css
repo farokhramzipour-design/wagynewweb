@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: #f7f6f2;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  color: #111111;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+::selection {
+  background: #ece8ff;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6;
+}
+
+.card {
+  @apply rounded-xl border border-border bg-surface shadow-soft;
+}
+
+.page-title {
+  @apply text-2xl font-semibold;
+}
+
+.subtle {
+  @apply text-subtle;
+}
