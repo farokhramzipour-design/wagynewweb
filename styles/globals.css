@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "IRANSans";
+  src: url("/fonts/IRANSansX-Regular.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   color-scheme: light;
 }
@@ -11,8 +19,9 @@ html {
 }
 
 body {
-  font-family: "Vazirmatn", sans-serif;
+  font-family: "IRANSans", "Vazirmatn", system-ui, sans-serif;
   color: #111111;
+  line-height: 1.8;
 }
 
 * {
