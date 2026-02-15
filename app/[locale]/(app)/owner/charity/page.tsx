@@ -53,7 +53,7 @@ export default function CharityPage() {
                 <div className="h-2 rounded-full bg-border">
                   <div className="h-2 rounded-full bg-brand-500" style={{ width: `${progress}%` }} />
                 </div>
-                <Link className="text-brand-700" href={`/${locale}/charity/${item.charity_case_id}`}>
+                <Link className="text-brand-700" href={`/${locale}/owner/charity/${item.charity_case_id}` as any}>
                   {locale === "fa" ? "مشاهده پرونده" : "View case"}
                 </Link>
               </CardContent>

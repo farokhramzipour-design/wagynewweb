@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { getMessages } from "next-intl/server";
 import { Providers } from "@/components/providers";
-import { AppShell } from "@/components/app-shell";
 import { defaultLocale, localeDir, locales } from "@/lib/i18n/config";
 
 export default async function LocaleLayout({
@@ -20,9 +19,7 @@ export default async function LocaleLayout({
 
   return (
     <div lang={locale} dir={dir} className={dir === "rtl" ? "rtl" : "ltr"}>
-      <Providers locale={locale} messages={messages}>
-        <AppShell>{children}</AppShell>
-      </Providers>
+      <Providers locale={locale} messages={messages}>{children}</Providers>
     </div>
   );
 }

@@ -52,7 +52,7 @@ export default function SearchPage() {
     } else {
       next.set(key, value);
     }
-    router.push(`/${locale}/search?${next.toString()}`);
+    router.push((`/${locale}/search?${next.toString()}`) as any);
   };
 
   const selectedService = serviceTypes.data?.find((item) => item.service_type_id === filters.service_type_id);
@@ -181,7 +181,7 @@ export default function SearchPage() {
             </div>
           )}
           <div className="flex gap-2">
-            <Button variant="secondary" className="w-full" onClick={() => router.push(`/${locale}/search`)}>
+            <Button variant="secondary" className="w-full" onClick={() => router.push((`/${locale}/search`) as any)}>
               {t("actions.clear")}
             </Button>
           </div>
@@ -224,7 +224,7 @@ export default function SearchPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Button variant="ghost" asChild>
-                      <Link href={`/${locale}/providers/${provider.provider_id}`}>
+                      <Link href={`/${locale}/providers/${provider.provider_id}` as any}>
                         {locale === "fa" ? "مشاهده" : "View"}
                       </Link>
                     </Button>

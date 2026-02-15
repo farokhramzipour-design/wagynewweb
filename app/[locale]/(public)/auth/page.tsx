@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useMutation } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { otpRequestSchema, otpVerifySchema } from "@/lib/validators/auth";
 import { auth } from "@/lib/api";
+import { useRouter } from "next/navigation";
+import { setSession } from "@/lib/auth/session";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -14,6 +16,8 @@ import { FormError } from "@/components/ui/form-error";
 
 export default function LoginPage() {
   const t = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
   const [step, setStep] = useState<"request" | "verify">("request");
   const requestForm = useForm({
     resolver: zodResolver(otpRequestSchema),
@@ -33,7 +37,11 @@ export default function LoginPage() {
   });
 
   const verifyOtp = useMutation({
-    mutationFn: auth.otpVerify
+    mutationFn: auth.otpVerify,
+    onSuccess: () => {
+      setSession({ user_id: 1, provider_status: "none", is_admin: false });
+      router.push(`/${locale}/owner` as any);
+    }
   });
 
   return (
