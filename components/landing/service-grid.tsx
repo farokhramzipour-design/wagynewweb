@@ -1,14 +1,14 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { HeartHandshake, Home, Scissors, Shield, Sparkles, Tent, Walk, Zap } from "lucide-react";
+import { Footprints, HeartHandshake, Home, Scissors, Shield, Sparkles, Tent, Zap } from "lucide-react";
 import { Stagger, StaggerItem } from "@/components/motion";
 
 const services = (locale: string) => [
   { id: "boarding", title: locale === "fa" ? "پانسیون" : "Boarding", desc: locale === "fa" ? "شبانه و امن" : "Overnight care", icon: Home },
   { id: "house", title: locale === "fa" ? "نگهداری در منزل" : "House Sitting", desc: locale === "fa" ? "در خانه شما" : "At your home", icon: Tent },
   { id: "dropin", title: locale === "fa" ? "ویزیت" : "Drop-In", desc: locale === "fa" ? "بازدید سریع" : "Quick visits", icon: Zap },
-  { id: "walk", title: locale === "fa" ? "پیاده‌روی" : "Dog Walking", desc: locale === "fa" ? "روزانه و نشاط" : "Daily walks", icon: Walk },
+  { id: "walk", title: locale === "fa" ? "پیاده‌روی" : "Dog Walking", desc: locale === "fa" ? "روزانه و نشاط" : "Daily walks", icon: Footprints },
   { id: "daycare", title: locale === "fa" ? "مهد روزانه" : "Day Care", desc: locale === "fa" ? "بازی و تعامل" : "Play & socialize", icon: HeartHandshake },
   { id: "grooming", title: locale === "fa" ? "آرایش" : "Grooming", desc: locale === "fa" ? "تمیز و مرتب" : "Clean & tidy", icon: Scissors },
   { id: "training", title: locale === "fa" ? "آموزش" : "Training", desc: locale === "fa" ? "رفتار حرفه‌ای" : "Expert training", icon: Shield }
