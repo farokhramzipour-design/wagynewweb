@@ -24,7 +24,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/node_modules ./node_modules
 COPY docker-entrypoint.sh /app/docker-entrypoint.sh
-RUN chmod +x /app/docker-entrypoint.sh
+RUN chmod +x /app/docker-entrypoint.sh && chown -R nextjs:nodejs /app/public
 USER nextjs
 EXPOSE 3000
 ENTRYPOINT ["/app/docker-entrypoint.sh"]
