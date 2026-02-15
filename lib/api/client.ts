@@ -1,8 +1,11 @@
 import axios from "axios";
 import { readTokens, clearTokens } from "@/lib/auth/tokens";
 
+const runtimeBase =
+  typeof window !== "undefined" ? (window as any).__ENV?.NEXT_PUBLIC_API_BASE_URL : undefined;
+
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000",
+  baseURL: runtimeBase || process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:8000",
   timeout: 15000
 });
 
